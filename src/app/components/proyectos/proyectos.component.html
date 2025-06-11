@@ -1,8 +1,34 @@
 <div class="container-xl text-white">
-  <h1 class="my-4 py-4 text-center">
-    <span class="decorated-heading">PROYECTS</span>
-  </h1>
+  <div class="text-center">
+    <a class="my-4 py-4 bold headerLink" href="#projects">
+      <span class="decorated-heading my-4">PROYECTS</span>
+    </a>
+  </div>
 
-
-
+  <section id="projects" class="py-5 bg-dark text-light">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Project Card -->
+        <div class="col-md-6 col-lg-4" *ngFor="let project of projects">
+          <div class="card h-100 bg-secondary text-light">
+            <img [src]="project.image" class="card-img-top" [alt]="project.title">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-light">{{ project.title }}</h5>
+              <p class="card-text">{{ project.description }}</p>
+              <div class="mt-auto">
+                <a *ngIf="project.github" [href]="project.github" class="btn btn-outline-light btn-sm me-2" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <!--
+                <a *ngIf="project.demo" [href]="project.demo" class="btn btn-outline-primary btn-sm" target="_blank">
+                  <i class="fa fa-external-link-alt"></i> Live Demo
+                </a>
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

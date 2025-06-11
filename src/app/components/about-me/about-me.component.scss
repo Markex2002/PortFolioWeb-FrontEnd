@@ -18,3 +18,28 @@
   border-image-source: linear-gradient(135deg, #3a3d98, #7e57c2);
   border-radius: 12px;
 }
+
+a{
+  color: white;
+  font-size: 42px;
+}
+
+.flip-image {
+  animation: spinY 2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.flip-image-slow {
+  animation: spinY 2.5s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.flip-image-fast {
+  animation: spinY 1.5s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spinY {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}

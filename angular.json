@@ -98,7 +98,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://Markex2002.github.io/PortFolioWeb-FrontEnd.git/"
+            "baseHref": "https://Markex2002.github.io/PortFolioWeb-FrontEnd/"
           }
         }
       }
