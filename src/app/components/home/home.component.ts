@@ -13,7 +13,7 @@ import {HeaderComponent} from "../header/header.component";
     ProyectosComponent,
     ContactoComponent,
     NavBarComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

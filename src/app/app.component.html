@@ -1,5 +1,14 @@
 
-<div class="min-vh-100 bg-dark">
+<ngx-particles
+  [id]="id"
+  [options]="particlesOptions"
+  (particlesLoaded)="particlesLoaded($event)"
+  class="particles-background">
+</ngx-particles>
+
+
+
+<div class="min-vh-100">
   <app-nav-bar></app-nav-bar>
 
   <app-home></app-home>
