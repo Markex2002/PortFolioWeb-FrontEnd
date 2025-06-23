@@ -3,7 +3,6 @@ FROM node:alpine AS builder
 WORKDIR /
 
 # Install dependencies and build the Angular app
-RUN npm run build
 
 # Production stage with Nginx
 FROM nginx:alpine
