@@ -1,9 +1,6 @@
 FROM node:alpine AS builder
 
-
-# Install dependencies and build the Angular app
-RUN npm install
-RUN npm run build
+WORKDIR /app
 
 # Production stage with Nginx
 FROM nginx:alpine
