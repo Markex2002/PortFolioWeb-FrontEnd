@@ -1,6 +1,5 @@
 FROM node:alpine AS builder
 
-WORKDIR /app
 
 # Install dependencies and build the Angular app
 RUN npm install
