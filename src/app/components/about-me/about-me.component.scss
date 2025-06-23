@@ -19,6 +19,13 @@
   border-radius: 12px;
 }
 
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
 a{
   color: white;
   font-size: 42px;
