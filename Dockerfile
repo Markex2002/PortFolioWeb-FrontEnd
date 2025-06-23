@@ -1,8 +1,12 @@
 FROM node:alpine AS builder
 
-WORKDIR /
+WORKDIR /app
+
+COPY ./ /app/
 
 # Install dependencies and build the Angular app
+RUN npm install
+RUN npm run build
 
 # Production stage with Nginx
 FROM nginx:alpine
@@ -11,7 +15,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy built application from builder stage
-COPY --from=builder /dist/app-portfolio/browser /usr/share/nginx/html
+COPY --from=builder /app/dist/app-portfolio/browser /usr/share/nginx/html
 
 # Copy custom nginx configuration (optional)
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
