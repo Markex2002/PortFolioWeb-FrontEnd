@@ -1,7 +1,6 @@
 FROM node:alpine AS builder
 
 WORKDIR /app
-RUN apk add --no-cache git
 
 # Install dependencies and build the Angular app
 RUN npm install
