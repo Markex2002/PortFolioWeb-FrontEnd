@@ -2,6 +2,7 @@ FROM node:alpine AS builder
 
 WORKDIR /app
 
+# Copies our files into the app WorkDir
 COPY ./ /app/
 
 # Install dependencies and build the Angular app
